@@ -6,5 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learnapp';
+  title = 'learnapp#build by @nikhilrameshhegde' + new Date().getFullYear();
+  x : number = 10
+  y : number = 20
+  inputNumber : number = 4;
+
+  public product() : number {
+    return this.x * this.y;
+  }
+
+  public factorial(n: number) : number {
+    if (n == 0 || n == 1) {
+      return 1;
+    } else {
+      return n * this.factorial(n - 1);
+    }
+  }
+
+  public calculateFactorial(): number {
+    return this.factorial(this.inputNumber);
+  }
 }
