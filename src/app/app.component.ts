@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'learnapp#build by @nikhilrameshhegde' + new Date().getFullYear();
+  title = 'learnapp';
   x : number = 10
   y : number = 20
   inputNumber : number = 4;
