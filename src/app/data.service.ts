@@ -38,4 +38,14 @@ export class DataService {
     const url: string = "http://localhost:8090/product/api1.0/addProduct"
     return this.http.post(url, product)
   }
+
+  deleteProduct(id:number): Observable<any> {
+    const url: string = "http://localhost:8090/product/api1.0/delete/" + id
+    return this.http.delete(url)
+  }
+
+  updateProduct(product:product): Observable<any> {
+    const url: string = "http://localhost:8090/product/api1.0/modify"
+    return this.http.put(url, product)
+  }
 }
