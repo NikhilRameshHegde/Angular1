@@ -4,16 +4,20 @@ import {FormsModule}  from '@angular/forms';
 import { AppComponent } from './app.component';
 import { DataComponent } from './data/data.component';
 import { AkatsukiComponent } from './akatsuki/akatsuki.component';
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataComponent,
-    AkatsukiComponent
+    AkatsukiComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
