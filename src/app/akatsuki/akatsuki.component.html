@@ -1,0 +1,40 @@
+<div>
+    <h2>Akatsuki Wa Sudotta</h2>
+    <h3>Name: {{name}}</h3>
+    <h3>Village: {{village}}</h3>
+    <h3>Abilities: {{abilities}}</h3>
+    <h3>Quote: {{quote}}</h3>
+</div>
+
+<div>
+    <h2>Akatsuki Characters</h2>
+  
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Village</th>
+          <th>Abilities</th>
+          <th>Quote</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let character of characters" 
+            (click)="selectCharacter(character)"
+            [class.selected-row]="selectedCharacter === character">
+          <td>{{ character.name }}</td>
+          <td>{{ character.village }}</td>
+          <td>{{ character.abilities }}</td>
+          <td>{{ character.quote }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div *ngIf="selectedCharacter" style="margin-top: 20px; border: 1px solid #ccc; padding: 10px;">
+    <h3>Character Details</h3>
+    <p><strong>Name:</strong> {{ selectedCharacter.name }}</p>
+    <p><strong>Village:</strong> {{ selectedCharacter.village }}</p>
+    <p><strong>Abilities:</strong> {{ selectedCharacter.abilities }}</p>
+    <p><strong>Quote:</strong> "{{ selectedCharacter.quote }}"</p>
+  </div>

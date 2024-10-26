@@ -1,4 +1,4 @@
-class Product {
+export class product {
     productId: number
     description: string
     brand: string
